@@ -2,13 +2,22 @@ import { Button } from '@nextui-org/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
+const buttonStyle = {
+  borderRadius : "5px"
+}
+const fonts = {
+  '@import': "url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap')",
+  fontFamily: 'Crimson Text'
+};
+
 export default function Home() {
   return (
     <main className="grid grid-cols-2">
       <div className="flex justify-center items-center h-screen bg-blue-900">
         <div className="flex flex-col items-center justify-center mx-16">
           <img src="/logoUNT.png" alt="Logo" width={400} height={400} />
-          <h1 className='font-serif text-4xl text-center text-white'>UNIVERSIDAD NACIONAL DE TRUJILLO</h1>
+          <h1 className='text-4xl text-center text-white' style={fonts}>UNIVERSIDAD NACIONAL DE TRUJILLO</h1>
         </div>
       </div>
       <div className="flex justify-center items-center h-screen bg-slate-200">
@@ -30,7 +39,7 @@ export default function Home() {
                   name="username"
                   id="username"
                   autoComplete="username"
-                  className="block flex-1 w-96  border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 max-md:w-48 sm:text-sm sm:leading-6"
+                  className="block flex-1 w-96  border-0 bg-transparent py-1.5 pl-2 text-gray-900 placeholder:text-gray-400 focus:ring-0 max-md:w-48 sm:text-sm sm:leading-6"
                   placeholder="janesmith"
                 />
               </div>
@@ -47,15 +56,15 @@ export default function Home() {
                   name="password"
                   id="password"
                   autoComplete="password"
-                  className="block flex-1 w-96 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 max-md:w-48 sm:text-sm sm:leading-6"
+                  className="block flex-1 w-96 border-0 bg-transparent py-1.5 pl-2 text-gray-900 placeholder:text-gray-400 focus:ring-0 max-md:w-48 sm:text-sm sm:leading-6"
                   placeholder="********"
                 />
               </div>
             </div>
           </div>
-          <div className='buttons mt-8 flex gap-4'>
-            <Button as={Link} href='/' className='bg-blue-700 text-white'>Ingresar</Button>
-            <Button as={Link} href='/Registro' className='bg-yellow-600 text-white'>Registrarme</Button>
+          <div className='buttons mt-8 flex gap-4 w-full'>
+            <Button as={Link} href='/' className='bg-blue-700 text-white w-1/2 ' style={buttonStyle}>Ingresar</Button>
+            <Button as={Link} href='/Registro' className='bg-yellow-600 text-white w-1/2 ' style={buttonStyle}>Registrarme</Button>
           </div>
         </div>
       </div>
